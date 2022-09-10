@@ -1,0 +1,62 @@
+form {
+    display: inline-block;
+    padding: 12px;
+    background: #fff;
+}
+input, button  {
+    box-sizing: border-box;
+    height: 36px;
+    width: 180px;
+    padding: 6px;
+    vertical-align: middle;
+    border: solid 2px lightgray;
+    border-radius: 6px;
+    outline: none;
+}
+button {
+    width: auto;
+    height: 36px;
+    margin: 12px 0;
+    padding: 12px;
+    border: none;
+}
+.validate:invalid {
+    border-color: red;
+}
+label {
+    position: relative;
+    display: inline-block;
+    margin: 12px 6px;
+    vertical-align: top;
+}
+.errorMSG {
+    display: none;
+}
+.validate:invalid ~ .errorMSG {
+    display: block;
+    width: 180px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: red;
+}
+.label {
+    position: absolute;
+    left: 12px;
+    top: -12px;
+    color: gray;
+    background: #fff;
+}
+:valid + .label:after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    width: 10px;
+    height: 5px;
+    border: solid 3px blue;
+    border-width: 0 0 3px 3px;
+    transform: rotate(-45deg);
+}
+.validate:invalid + .label {
+    color: red;
+    font-weight: 600;
+}
