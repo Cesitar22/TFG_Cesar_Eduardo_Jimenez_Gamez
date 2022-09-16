@@ -3,9 +3,10 @@
 body {
   font-family: "Lato", sans-serif;
   margin: 0px;
+  /* background-image:url("./imagenes/Logo.png") */
 }
 
-body { background-image: url(cielo_azul.jpg); background-size: cover }
+body { background-image: url(images/cielo_azul.jpg); background-size: cover }
 
 .tab {
   position:fixed;
@@ -150,19 +151,6 @@ html, body {
   border-color: rgb(236, 129, 183);
 }
 
-/* #dron_solo {
-  width: 77%;
-  margin-left: 17%;
-  margin-top: 0%;
-  background-color: white;
-  height: 80%;
-  position: absolute;
-	border: 1.5px solid;
-  border-color: black;
-	overflow: auto;
-  display: block;
-} */
-
 .resultado{
   margin-left: 0%;
   margin-top: 4%;
@@ -287,11 +275,6 @@ html, body {
 
 .btnAyA:hover {background: #0b7dda;}
 
-.meterdatos:invalid {
-  border: solid red;
-  background-color: rgb(220, 100, 100);
-}
-
 .meterdatos_cargas{
   width:7%;
   margin-top: 0%;
@@ -353,12 +336,35 @@ html, body {
   width:16.9%;
   height: 33%;
 }
-.foto1:hover{
+.foto_prisma, .foto_ver_dron, .fotos_botones, .fotos_error, .fotos_ejes {
+  width:60%;
+  height: 60%;
+  text-align: center;
+
+  transition: 0.5s;
+  object-fit: cover;
+
+  filter: saturate(140%);
+  image-rendering: crisp-edges;
+}
+.fotos_ejes{
+  width:310px;
+  height: 230px;
+  text-align: center;
+
+  transition: 0.5s;
+  object-fit: cover;
+
+  filter: saturate(140%);
+  image-rendering: crisp-edges;
+}
+.foto1:hover, .foto_prisma:hover, .fotos_botones:hover, .fotos_error:hover, .foto_ver_dron:hover, .fotos_ejes:hover{
   transform: scale(1.08);
 }
 .foto2:hover{
   transform: scale(1.1);
 }
+
 
 /* QUITAMOS LAS FLECHITAS DEL INPUT NUMÉRICO (SE PUEDE SEGUIR HACIENDO SCROLL CON EL MOUSE) */
 input[type=number]::-webkit-inner-spin-button, 

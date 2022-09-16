@@ -1,4 +1,9 @@
-var clic = 0; 
+var clic = 1;
+
+// const buttonForm = document.getElementById("calculando");
+// buttonForm.addEventListener("click",(event) => {
+//   event.preventDefault();
+// })
 
 //SE CREA LA RESPUESTA A LOS BOTONES DE LA CREACIÓN Y ELIMINACIÓN DE CARGAS
 $(document).ready(function() {
@@ -216,7 +221,7 @@ function meteCargaPago(){
 
     let str = JSON.stringify(mijson);
     Enviar_cargas(str);
-    swal("Esto es solo un AVISO", "No se ha introucido ninguna carga de pago, por lo que en la siguiente sección el dron se visualizará vacío.");
+    swal("Esto es solo un AVISO", "No se ha introducido ninguna carga de pago, por lo que en la siguiente sección el dron se visualizará vacío.");
   
   } else{
 
@@ -269,7 +274,7 @@ function meteCargaPago(){
       lado_v_comprobar === null || lado_v_comprobar ==='' || altura_comprobar === null || altura_comprobar ==='' || 
       masa_carga_comprobar === null || masa_carga_comprobar ==='') {
 
-        swal("ERROR", "Le falta un campo por completar en los datos de la Carga " + j_text +".", "error");
+        swal("ERROR", "Le falta un campo por completar en los datos de la Carga " + j_text +" o ha introducido un valor no válido.", "error");
         return;
 
       } else if (lado_h_comprobar < 0.1 || lado_v_comprobar < 0.1 || altura_comprobar < 0.1){
@@ -321,8 +326,10 @@ async function Enviar_cargas(myjson){
 
 }
 
+
 //SI SE HA CLICADO EL BOTÓN "GUARDAR Y CARGAR" EN LA DEFINICIÓN DE LAS CARGAS DE PAGO, ENTONCES SE PUEDE VISUALIZAR
 //EL DRON; SI NO SE HA PULSADO ESE BOTÓN, NO SE PUEDE VISUALIZAR
+
 function divLogin(){ 
 
   if(clic==0){
@@ -341,3 +348,4 @@ function divLogin(){
   }   
 
 }
+

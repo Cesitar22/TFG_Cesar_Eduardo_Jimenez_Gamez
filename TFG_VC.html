@@ -7,11 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://kit.fontawesome.com/ffb7a77e4b.js" crossorigin="anonymous"></script>
 
-  <link rel="icon" href = "Logo.png" type = "image/x-icon" >
+  <link rel="icon" href = "images/Logo.png" type = "image/x-icon" >
 
-  <title>
-    Personaliza tu dron con VC
-  </title>
+  <title>Personaliza tu dron con V&C Drone</title>
 
   <link rel="stylesheet" type="text/css" href="TFG_VC.css">
 
@@ -24,7 +22,7 @@
   <script type="module" src= "indexAnimaciones.js" async="async"></script>
 
 
-  <img class="logo" src="Logo.png">
+  <img class="logo" src="images/Logo.png">
 
   <div class="tab">
       <button class="tablinks" onclick="opensection(event, 'Bienvenida')" id="defaultOpen"> 
@@ -42,9 +40,7 @@
       </button>
   </div>
 
-
-
-  <div id="Bienvenida" class="tabcontent" background="cielo_azul.jpg">
+  <div id="Bienvenida" class="tabcontent">
 
       <h1>"VOLAR SE HACE EN GRAN MEDIDA <br> CON LA IMAGINACIÓN" </h1>
       <h2><i>¡Descubre tus posibilidades!</i></h2>
@@ -59,10 +55,13 @@
             con el fin de asegurar la viabilidad del cumplimiento de la misión de vuelo propuesta. ¡Esperamos que este 
             análisis prevuelo le sea de utilidad!
           </p>
-          <video width="560" height="315" controls autoplay frameborder="0" allow="accelerometer; clipboard-write; 
+          <!-- <video width="560" height="315" controls autoplay frameborder="0" allow="accelerometer; clipboard-write; 
           encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
             <source src="Nuestro_TFG.mp4" type="video/mp4">
-          </video>
+          </video> -->
+          <iframe width="560" height="315" style="text-align: center" src="https://www.youtube.com/embed/EPi0zxSw0sw?autoplay=1" 
+          title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <br><br><br>
       </div>
 
@@ -71,8 +70,8 @@
       <div class="panel">
         <p>
           A continuación, detallaremos sección a sección cuál es el procedimiento a seguir para sacarle el máximo partido 
-          a <b>V&C Drone</b>. Aclararemos <b>paso por paso</b> cada una de las partes de esta página web, ayudándole a 
-          resolver todas sus dudas.
+          a V&C Drone. Aclararemos paso por paso cada una de las dudas que le pudieran susrgir en cualquiera de las partes 
+          de esta página web.
         </p>
         <ul>
           <li>
@@ -82,8 +81,8 @@
           </li>
           <li>
             En la siguiente sección, <b>“Parámetros de entrada”</b> deberá introducir los datos de sus cargas de pago con 
-            el fin de nosotros poder mostrar la disposición de su modelo ya cargado, darle datos sobre el centro de gravedad
-            calculado y, por último, regalarle algunas sugerencias para mejorar su vuelo.
+            el fin de nosotros poder mostrar la disposición de su modelo cargado, darle datos sobre el centro de gravedad
+            calculado y, por último, darle algunas sugerencias para mejorar su vuelo.
           </li>
           <p>En la pestaña <b>“Defina las cargas de pago”</b> dispondrá de tres botones:</p>
           <ul>
@@ -91,25 +90,25 @@
               <b>Añadir carga.</b> Deberá pulsar este botón tantas veces como cargas quiera introducir en el dron. 
               Por ejemplo, si desea introducir 3 cargas, la imagen resultante será la siguiente:
             </li>
-            <!-- imagen -->
+            <br><img class="fotos_botones" src="images/3_cargas.png"><br>
             <li>
-              <b>Eliminar la última carga.</b>Si usted desea eliminar la última fila de carga creada, no tendrá más que 
+              <b>Eliminar la última carga.</b> Si usted desea eliminar la última fila creada, no tendrá más que 
               pulsar este botón. Si eliminamos la última fila del ejemplo anterior, se obtiene:
             </li>
-            <!-- imagen -->
+            <br><img class="fotos_botones" src="images/2_cargas.png"><br>
             <li>
-              <b>Guardar y cargar datos.</b>Una vez elegida la cantidad de cargas que desee meter en el dron, deberá 
+              <b>Guardar y cargar datos.</b> Una vez elegida la cantidad de cargas que desee meter en el dron, deberá 
               completar todos los campos de cada carga. En caso de no hacerlo o de introducir algún dato erróneo, saltará 
               un mensaje de error al pulsar este botón. Si usted ha completado todos los campos correctamente, entonces 
               se enviarán al servidor los datos de las cargas introducidas en ese momento.
             </li>
-            <!-- IMAGEN DE ERRORES, IMAGEN DE ENVIADO CORRECTAMENTE -->
+            <img class="fotos_error" src="images/campo_por_completar.png">
           </ul>
           <p>
-            <b>ATENCIÓN:</b> si pulsa el botón <b>Guardar y cargar datos.</b> con “cero cargas” usted estará eligiendo 
-            ver el dron vacío, sin cargar.
+            <b>ATENCIÓN:</b> si pulsa el botón "Guardar y cargar datos" con “cero cargas” usted estará decidiendo 
+            hacer una visualización del dron vacío sin cargar.
           </p>
-          <!-- IMAGEN -->
+          <img class="fotos_error" src="images/aviso_0_cargas.png"><br>
           <p>
             Cada una de las cargas definidas será modelada como un prisma rectangular. Los datos que debe introducir 
             por cada una de las cargas son los siguientes:
@@ -121,34 +120,41 @@
               medidas en centímetros (cm).
             </li>
             <li>
-              <b>(A, B, H):</b> son las medidas de los lados del prisma, siendo H la altura y A, B los lados de la base. 
+              <b>(A, B, H):</b> son las medidas de los lados del prisma, siendo H la altura según la dirección "z", A el lado de la base según
+              la dirección "x" y B el lado de la base según la dirección "y". 
               Se deben introducir las medidas en centímetros (cm).
             </li>
-            <li><b>Masa:</b> introduzca la masa en kilogramos de cada una de las cargas que usted desee definir.</li>
+            <li><b>Masa:</b> introduzca la masa en kilogramos (kg) de cada una de las cargas que usted desee definir.</li>
           </ul>
-          <!-- IMAGEN DEL ESQUEMA DEL PRISMA -->
+          <img class="foto_prisma" src="images/imagen_prisma.png"><br>
+          <img class="fotos_ejes" src="images/imagen_ejes_dron.png"><img class="fotos_ejes" src="images/imagen_ejes_dron_2.png">
           <p>
             Una vez recibida la notificación de éxito de envío de datos, usted deberá dirigirse a la sección <b>“Visualice 
             su dron”</b>, donde, pulsando la pestaña “Visualice su dron” y después el botón “Visualizar dron”, podrá ver 
             el modelo 3D del dron con las cargas que haya definido en la escena también.
           </p>
-          <!-- IMAGEN DEL MODELO 3D DEL DRON -->
+          <img class="foto_ver_dron" src="images/ver_dron.png">
           <p>
             También en la pestaña <b>“Calcule el alcance y la autonomía”</b> de la sección “Parámetros de entrada” 
             tendrá que rellenar un total de 9 casillas para que nosotros podamos calcular el alcance y la autonomía de su 
-            dron. Estos 9 datos que debe introducir son los siguientes:
+            dron. Estos 9 datos dependerán de la fase de vuelo del VTOL, y son los siguientes:
           </p>
-          <!-- IMAGEN -->
+          <br><img class="foto_ver_dron" src="images/resultados_todo.png">
           <ul>
-            <li><b>N<sub>mot</sub>:</b></li>
-            <li><b>I<sub>mot</sub>:</b></li>
-            <li><b>I<sub>equip</sub>:</b></li>
-            <li><b>V<sub>bat</sub>:</b></li>
-            <li><b>V<sub>0</sub>:</b></li>
-            <li><b>Q:</b></li>
-            <li><b>C<sub>rate</sub>:</b></li>
-            <li><b>DR:</b></li>
-            <li><b>L<sub>flying</sub>:</b></li>
+            <li><b>N<sub>mot</sub>:</b> número de motores utilizados. <b>(Ej.: 4 motores)</b></li>
+            <li><b>I<sub>mot</sub>:</b> corriente máxima en amperios (A) que consume un solo motor. <b>(Ej.: 10A)</b></li>
+            <li><b>I<sub>equip</sub>:</b>corriente máxima en amperios (A) que consumen los equipos del dron, excluyendo sus motores. 
+              <b>(Ej.: 2A)</b></li>
+            <li><b>V<sub>bat</sub>:</b> tensión nominal en voltios (V) de la batería. <b>(Ej.: 7,4V)</b></li>
+            <li><b>V<sub>0</sub>:</b> velocidad de vuelo (km/h) del dron; aplicable a la fase de crucero. <b>(Ej.: 70km/h)</b></li>
+            <li><b>Q:</b> capacidad de la batería en mA·h. <b>(Ej.: 50000mA·h)</b></li>
+            <li><b>C<sub>rate</sub>:</b> tasa C de la batería, definida como la tasa máxima a la que puede descargarse una 
+              batería en relación con su capacidad sin que se dañe o sobrecaliente; la tasa C se mide en h<sup>-1</sup>. 
+              <b>(Ej.: 10h<sup>-1</sup>)</b></li>
+            <li><b>DR:</b> regla de descarga de la batería. Se trata del máximo porcentaje de carga recomendable para la batería. 
+              <b>(Ej.: 80%)</b></li>
+            <li><b>L<sub>flying</sub>:</b> carga de pago en tanto por ciento; se divide el peso de la carga de pago entre el peso total 
+              del vuelo (peso del dron más peso de la carga de pago) y se multiplica por 100. <b>(Ej.: 30%)</b></li>
           </ul>
           <p>Cuando haya introducido todos los datos solicitados, pulse el botón “Guardar y Calcular”.</p>
           <li>
@@ -176,14 +182,14 @@
             resultados preliminares de vuelo que podrá visualizar en V&C Drone. ¡Virginia espera que su vuelo cumpla con 
             las expectativas que le proporcionamos!
           </p>
-          <img class="foto1" src="Virgi.jpg">
+          <img class="foto1" src="images/Virgi.jpg">
           <br>
           <p>
             <b>César Jiménez</b> es el creador de la página web que está leyendo ahora mismo. Su gusto por los desafíos, 
             persistencia en el trabajo y creatividad han hecho de esta página web algo sencillo de entender y utilizar. 
             ¡César espera que su visita a este sitio web sea lo más cómoda y satisfactoria posible!
           </p>
-          <img class="foto1" src="Cesar.jpg">
+          <img class="foto1" src="images/Cesar.jpg">
           <br>
           <p>¡<b>Juntos</b> forman un gran equipo de trabajo!</p>
           <p>
@@ -191,7 +197,7 @@
             sacrificios, al final, ¡siempre merecen la pena! ¡Ambos están encantados de haber desarrollado un entorno que 
             le pueda ser de utilidad en su misión de vuelo!
           </p>
-          <img class="foto2" src="Juntos.jpeg">
+          <img class="foto2" src="images/Juntos.jpeg">
           <p>¡Le deseamos un buen vuelo! &#128516; &#128747;</p>
           <br>
       </div>
@@ -200,9 +206,6 @@
         
   </div>
 
-
-
-
   <div id="Parametros" class="tabcontent">
 
       <h1>"VOLAR SE HACE EN GRAN MEDIDA <br> CON LA IMAGINACIÓN" </h1>
@@ -210,9 +213,7 @@
       <br>
 
 
-      <button class="accordion" id ="acordeon" onclick="openacordeon_scroll()">
-        <b>1/2 - Defina las cargas de pago</b>
-      </button>
+      <button class="accordion" id ="acordeon" onclick="openacordeon_scroll()"><b>1/2 - Defina las cargas de pago</b></button>
       <div class="panel-scroll" id="acordeon div">
           <p>
             Con el objetivo de calcular el <b>centro de gravedad</b> de su dron, necesitaremos que introduzca los datos 
@@ -223,7 +224,6 @@
           <div class="botones">
 
             <br>
-        
             <input type="button" class="botones_cargas" id="add" value="Añadir carga">  </input>
             <input type="button" class="botones_cargas" id="delete" value="Eliminar la última carga">
             <input id="calculando" type="button" class="botones_cargas" onclick="meteCargaPago()" value="Guardar y cargar datos">  </input>
@@ -236,7 +236,6 @@
           <br><br>
 
       </div>
-
 
       <button class="accordion" onclick="openacordeon()"><b>2/2 - Calcule el alcance y la autonomia</b></button>
       <div class="panel">
@@ -306,32 +305,28 @@
 
   </div>
 
-
-
-
   <div id="Modelo" class="tabcontent">
 
     <h1>"VOLAR SE HACE EN GRAN MEDIDA <br> CON LA IMAGINACIÓN" </h1>
     <h2><i>¡Descubre tus posibilidades!</i></h2>
     <br>
     <button class="accordion" onclick="openacordeon()"><b>1/1 - Visualice su dron</b></button>
+    
     <div class="panel">
       <p>
         ¡Bienvenido a la primera pestaña de resultados! Si usted ya ha incluido los datos de sus cargas de pago en la 
         pestaña de "Parámetros de entrada", pulse el siguiente botón para visualizar su dron cargado:
       </p>
-      <input id="calculando" type="button" class="botones_cargas" onclick="divLogin()" value="Visualizar dron">  </input>
+      <input id="calculando_" type="button" class="botones_cargas" onclick="divLogin()" value="Visualizar dron">  </input>
       <br><br><br>
     </div>
-    <!-- <iframe id="dron_solo" name="dron_solo" allow="fullscreen" allow="xr-spatial-tracking" src="./indexAnimaciones.html" style="display: unset;" scrolling="no"></iframe> -->
+
     <iframe id="viewer" name="viewer" allow="fullscreen" allow="xr-spatial-tracking" src="./indexAnimaciones.html" style="display: unset;" 
     scrolling="no"></iframe>
+
     <br><br><br><br><br>
     
   </div>
-
-
-
 
   <div id="Resultados" class="tabcontent">
     <h1>"VOLAR SE HACE EN GRAN MEDIDA <br> CON LA IMAGINACIÓN" </h1>
@@ -373,8 +368,6 @@
     <br><br><br><br>
   
   </div>
-
-
 
 
   <script>
